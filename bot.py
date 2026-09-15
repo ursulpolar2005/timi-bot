@@ -30,7 +30,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if "da" in user_text.lower():
             if chat_id not in chats_sessions:
                 chats_sessions[chat_id] = client.chats.create(
-                    model="gemini-3.6-flash",
+                    model="gemini-3.1-flash-lite",
                     config={
                         'system_instruction': TIMI_INSTRUCTIONS,
                         'temperature': 0.9,
